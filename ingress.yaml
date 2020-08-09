@@ -8,12 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
-  tls:
-  - hosts:
-    - webapp-aks-ingress.eastus.cloudapp.azure.com
-    secretName: tls-secret
   rules:
-  - host: webapp-aks-ingress.eastus.cloudapp.azure.com
     http:
       paths:
       - backend:
