@@ -1,0 +1,30 @@
+{
+  "name": "create-react-stater-kit",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "amazon-cognito-identity-js": "^4.3.3",
+    "aws-sdk": "^2.727.1",
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.3",
+    "cross-fetch": "^3.0.5",
+    "express": "^4.17.1",
+    "fetch": "^1.1.0",
+    "lodash": "^4.17.19",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
