@@ -8,6 +8,9 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
+  tls:
+  - hosts:
+    secretName: tls-secret
   rules:
     http:
       paths:
