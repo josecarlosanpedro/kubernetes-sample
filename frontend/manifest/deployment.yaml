@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reactjs-sample-deploy
+  labels:
+    name: reactjs-sample-deploy
+    app: reactjs-sample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: reactjs-sample-pod
+      app: reactjs-sample
+    
+  template:
+    metadata:
+      name: reactjs-sample-pod
+      labels:
+        name: reactjs-sample-pod
+        app: reactjs-sample
+    spec:
+      containers:
+        - name: reactjs-sample
+          image: josecarlosanpedro0302/reactjs-sample
+          ports:
+            - containerPort: 80
