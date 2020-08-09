@@ -1,24 +1,20 @@
- 
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: webapp-ingress
+  name: app-ingress
   annotations:
-    kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /
-    cert-manager.io/cluster-issuer: letsencrypt
 spec:
-  tls:
-  - hosts:
-    secretName: tls-secret
   rules:
-    - http:
+  - http:
       paths:
-      - backend:
+      - path: /
+        pathType: Prefix
+        backend:
           serviceName: reactjs-sample-pod
           servicePort: 80
-        path: /
-      - backend:
+      - path: /server
+        pathType: Prefix
+        backend:
           serviceName: node-server-sample
           servicePort: 80
-        path: /server
