@@ -16,7 +16,7 @@ app.use(function (req, res, next) {
 app.use(authRoute);
 app.use(homeRoute);
 
-const server = app.listen(process.env.PORT || 8080, function () {
+const server = app.listen(process.env.PORT || 80, function () {
   const port = server.address().port;
   console.log("App now running on port", port);
 });

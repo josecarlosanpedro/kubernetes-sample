@@ -24,4 +24,3 @@ spec:
           serviceName: node-server-sample
           servicePort: 80
         path: /server
-© 2020 GitHub, Inc.
