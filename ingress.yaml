@@ -15,3 +15,7 @@ spec:
         frontend:
           serviceName: reactjs-sample-pod
           servicePort: 80
+      - path: /server
+        backend:
+          serviceName: node-server-sample
+          servicePort: 80
