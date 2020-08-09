@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-server-sample-deploy
+  labels:
+    name: node-server-sample-deploy
+    app: node-server-sample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: node-server-sample-pod
+      app: node-server-sample
+    
+  template:
+    metadata:
+      name: node-server-sample-pod
+      labels:
+        name: node-server-sample-pod
+        app: node-server-sample
+    spec:
+      containers:
+        - name: node-server-sample
+          image: josecarlosanpedro0302/node-server-sample
+          ports:
+            - containerPort: 8080
