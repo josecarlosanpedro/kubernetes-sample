@@ -12,7 +12,7 @@ spec:
   - hosts:
     secretName: tls-secret
   rules:
-    http:
+    - http:
       paths:
       - backend:
           serviceName: reactjs-sample-pod
