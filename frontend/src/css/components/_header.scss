@@ -1,0 +1,11 @@
+.header-section {
+  display: flex;
+  padding: 20px 40px;
+  background-color: $primary;
+  div {
+    width: 100%
+  }
+  div .logout-btn{
+    float: right
+  }
+}

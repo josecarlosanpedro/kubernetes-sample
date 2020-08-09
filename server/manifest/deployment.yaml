@@ -23,4 +23,4 @@ spec:
         - name: node-server-sample
           image: josecarlosanpedro0302/node-server-sample
           ports:
-            - containerPort: 8080
+            - containerPort: 80
